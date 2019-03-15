@@ -114,7 +114,7 @@ public class Pet{
     msj += "                                        Edad: " + age + "\n";
     msj += "\n";
     msj += "\n";
-    msj += "\n";  
+    msj += "\n";
     msj += "--------------------------------------- Historia Clinica --------------------------------------- " + "\n";
     msj += cH.record();
 

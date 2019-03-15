@@ -161,7 +161,7 @@ public class Main {
     R1.animalRoom(Sasha);
     vet = new Veterinary("Mi pequeño animalito XD");
     vet.addClients(Diego);
-    vet.addRoom(R1);
+
   }
 
   public void message(){

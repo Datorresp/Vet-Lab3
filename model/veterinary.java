@@ -120,17 +120,17 @@ public class Veterinary{
 
   public int foundRoom(){
 
-    int i = 0;
-    boolean full = true;
+    i = 0;
+    full = true;
 
     while(i < rooms.length && !full) {
 
-      if (rooms[i] == null) {
+      if (rooms(i) == null) {
 
         full = false;
       }
 
-      i++;
+      i++
     }
 
     return i;
