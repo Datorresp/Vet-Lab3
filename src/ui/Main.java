@@ -157,7 +157,7 @@ public class Main {
     Pet Sasha = new Pet("Sasha", 20.0, 'D', 4, A1);
     Client Diego = new Client("Diego", 1193254110, "Cl 14 # 83-50", 3399068, new Date (12,12,2015));
     Diego.animalClient(Sasha);
-    Room R1 = new Room(false, 5, 10.0, 10000.0);
+    Room R1 = new Room(false, 5, 1000.0, 10000.0);
     R1.animalRoom(Sasha);
     vet = new Veterinary("Mi pequeño animalito XD");
     vet.addClients(Diego);
