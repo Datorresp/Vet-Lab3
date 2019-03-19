@@ -118,26 +118,29 @@ public class Veterinary{
     return p;
   }
 
-  public int foundRoom(){
+  public String roomAssignment(boolean hospitalize, long ids, String petName){
 
-    int i = 0;
-    boolean full = true;
+    String msj = "";
 
-    while(i < rooms.length && !full) {
+    if (hospitalize == true) {
 
-      if (rooms[i] == null) {
+      int i = 0;
+      boolean full = true;
 
-        full = false;
+      while(i < rooms.length && !full) {
+
+        if (rooms[i].getPet() == null) {
+
+          rooms[foundRoom()].setPet(foundClientpet(ids, petName));
+          msj = " Se Hospitalizo la mascota";
+          full = false;
+        }
+        else{
+
+          msj += "No se encontró espacio para hozpitalizar la mascota"
+        }
+        i++;
       }
-
-      i++;
     }
-
-    return i;
-  }
-
-  public void roomAssignment(long ids, String petName){
-
-    rooms[foundRoom()]= foundClientpet(ids, petName);
   }
 }

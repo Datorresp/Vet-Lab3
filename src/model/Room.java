@@ -16,17 +16,17 @@ public class Room{
 
   //RELACIONES
 
-  private ArrayList<Pet> pets;
+  private Pet pet;
 
   //CONSTRUCTOR
 
-  public Room(boolean availability, int days, double prize, double total){
+  public Room(boolean availability, int days, double prize, double total, Pet pet){
 
     this.availability = availability;
     this.days = days;
     this.prize = prize;
     this.total = total;
-    pets = new ArrayList<Pet>();
+    this.pet = pet;
   }
 
   //AVAILABILITY
@@ -77,9 +77,15 @@ public class Room{
     this.total = total;
   }
 
-  //AÑADIR MASCOTAS
+  //Pet
 
-  public boolean animalRoom(Pet pet){
-     return pets.add(pet);
+  public Pet getPet(){
+
+    return pet;
+  }
+
+  public void setPet(Pet pet){
+
+    this.pet = pet;
   }
 }
