@@ -2,6 +2,8 @@ package ui;
 
 import model.*;
 import java.util.Scanner;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class Main {
 
@@ -19,6 +21,14 @@ public class Main {
     Main m = new Main();
     m.message();
     m.showMenu();
+    Calendar calendario = new GregorianCalendar();
+    int anio = calendario.get(Calendar.YEAR);
+    int MES = calendario.get(Calendar.MONTH);
+    int DIA = calendario.get(Calendar.DAY_OF_MONTH);
+
+    System.out.print(anio + "\n");
+    System.out.print(MES + "\n");
+    System.out.print(DIA + "\n");
   }
 
   public void showMenu(){
@@ -171,5 +181,6 @@ public class Main {
   System.out.println("Presione 1 para ver la informacion del cliente");
   System.out.println("Presione 2 para crear un cliente");
   System.out.println("presione 3 para borrar clientes");
+
   }
 }

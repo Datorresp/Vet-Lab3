@@ -131,16 +131,17 @@ public class Veterinary{
 
         if (rooms[i].getPet() == null) {
 
-          rooms[foundRoom()].setPet(foundClientpet(ids, petName));
+          rooms[i].setPet(foundClientpet(ids, petName));
           msj = " Se Hospitalizo la mascota";
           full = false;
         }
         else{
 
-          msj += "No se encontró espacio para hozpitalizar la mascota"
+          msj += "No se encontró espacio para hozpitalizar la mascota";
         }
         i++;
       }
     }
+    return msj;
   }
 }
