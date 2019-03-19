@@ -135,4 +135,9 @@ public class Veterinary{
 
     return i;
   }
+
+  public void roomAssignment(long ids, String petName){
+
+    rooms[foundRoom()]= foundClientpet(ids, petName);
+  }
 }
