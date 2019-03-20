@@ -82,6 +82,8 @@ public class Veterinary{
     return delated;
   }
 
+  //Mostrar Clientes
+
   public String showClients(long ids){
 
     String msj = "-----------------------------";
@@ -92,13 +94,11 @@ public class Veterinary{
 
         msj += clients.get(i).showClients();
       }
-      else {
-
-        msj += "El cliente no existe";
-      }
     }
     return msj;
   }
+
+  //Agregar mascotasa cuartos
 
   public Pet foundClientpet (long ids, String petName){
 
@@ -143,5 +143,17 @@ public class Veterinary{
       }
     }
     return msj;
+  }
+
+  //Agregar MASCOTAS
+
+  public boolean addPet(long ids, Pet pet){
+
+    for (int i = 0; i < clients.size(); i++) {
+
+      if (ids == clients.get(i).getId()) {
+
+      }
+    }
   }
 }

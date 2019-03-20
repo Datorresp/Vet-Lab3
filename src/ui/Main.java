@@ -22,13 +22,9 @@ public class Main {
     m.message();
     m.showMenu();
     Calendar calendario = new GregorianCalendar();
-    int anio = calendario.get(Calendar.YEAR);
+    int ANHO = calendario.get(Calendar.YEAR);
     int MES = calendario.get(Calendar.MONTH);
     int DIA = calendario.get(Calendar.DAY_OF_MONTH);
-
-    System.out.print(anio + "\n");
-    System.out.print(MES + "\n");
-    System.out.print(DIA + "\n");
   }
 
   public void showMenu(){

@@ -88,4 +88,45 @@ public class Room{
 
     this.pet = pet;
   }
+
+  //PRECIO POR DIA DE LA MASCOTA
+
+  public void prizeForDay(){
+
+    if (pet.getAnimalType() == pet.DOG) {
+
+      if (pet.getWeight() > 1.0 && pet.getWeight() < 3.0) {
+
+        prize = 15000.0;
+
+      }
+
+      if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
+
+        prize = 17000.0;
+
+      }
+
+      if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
+
+        prize = 20000.0;
+
+    }
+  }
+
+  //MOSTRAR DISPONIBILIDAD DE cuartos
+
+  public String showRoom (){
+
+    String msj = "";
+
+    msj += "                                   La disponibilidad del cuarto es: "+ availability +"\n";
+
+    if (availability == false) {
+
+      msj += "                                 Lleva ocupado: " + days + "dias" + "\n";
+      msj += "                                 El precio de la habitacion por dias es: "+ prize + "\n";
+      msj += "                                 El precio total es: "
+    }
+  }
 }
