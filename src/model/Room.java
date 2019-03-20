@@ -111,6 +111,86 @@ public class Room{
 
         prize = 20000.0;
 
+      }
+      else {
+
+        prize = 25000.0;
+      }
+    }
+
+    if (pet.getAnimalType() == pet.CAT) {
+
+      if (pet.getWeight() > 1.0 && pet.getWeight() < 3.0) {
+
+        prize = 10000.0;
+
+      }
+
+      if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
+
+        prize = 12000.0;
+
+      }
+
+      if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
+
+        prize = 15000.0;
+
+      }
+      else {
+
+        prize = 20000.0;
+      }
+    }
+
+    if (pet.getAnimalType() == pet.BIRD) {
+
+      if (pet.getWeight() > 1.0 && pet.getWeight() < 3.0) {
+
+        prize = 10000.0;
+
+      }
+
+      if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
+
+        prize = 12000.0;
+
+      }
+
+      if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
+
+        prize = 20000.0;
+
+      }
+      else {
+
+        prize = 25000.0;
+      }
+    }
+
+    if (pet.getAnimalType() == pet.O) {
+
+      if (pet.getWeight() > 1.0 && pet.getWeight() < 3.0) {
+
+        prize = 10000.0;
+
+      }
+
+      if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
+
+        prize = 17000.0;
+
+      }
+
+      if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
+
+        prize = 30000.0;
+
+      }
+      else {
+
+        prize = 30000.0;
+      }
     }
   }
 
