@@ -144,16 +144,4 @@ public class Veterinary{
     }
     return msj;
   }
-
-  //Agregar MASCOTAS
-
-  public boolean addPet(long ids, Pet pet){
-
-    for (int i = 0; i < clients.size(); i++) {
-
-      if (ids == clients.get(i).getId()) {
-
-      }
-    }
-  }
 }

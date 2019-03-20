@@ -168,7 +168,7 @@ public class Room{
       }
     }
 
-    if (pet.getAnimalType() == pet.O) {
+    if (pet.getAnimalType() == pet.OTHER) {
 
       if (pet.getWeight() > 1.0 && pet.getWeight() < 3.0) {
 
@@ -206,7 +206,9 @@ public class Room{
 
       msj += "                                 Lleva ocupado: " + days + "dias" + "\n";
       msj += "                                 El precio de la habitacion por dias es: "+ prize + "\n";
-      msj += "                                 El precio total es: "
+      msj += "                                 El precio total es: ";
     }
+
+    return msj;
   }
 }
