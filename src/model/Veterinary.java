@@ -24,6 +24,15 @@ public class Veterinary{
     this.name = name;
     clients = new ArrayList<Client>();
     rooms = new Room [NUMBEROFROOMS];
+    rooms[0]= new Room(1, true, 5, 1000.0, 10000.0, null);
+    rooms[1]= new Room(2, true, 5, 1000.0, 10000.0, null);
+    rooms[2]= new Room(3, true, 5, 1000.0, 10000.0, null);
+    rooms[3]= new Room(4, true, 5, 1000.0, 10000.0, null);
+    rooms[4]= new Room(5, true, 5, 1000.0, 10000.0, null);
+    rooms[5]= new Room(6, true, 5, 1000.0, 10000.0, null);
+    rooms[6]= new Room(7, true, 5, 1000.0, 10000.0, null);
+    rooms[7]= new Room(8, true, 5, 1000.0, 10000.0, null);
+
   }
 
   //NAME
@@ -118,28 +127,68 @@ public class Veterinary{
     return p;
   }
 
-  public String roomAssignment(boolean hospitalize, long ids, String petName){
+  public String roomAssignment(long ids, String petName){
 
     String msj = "";
 
-    if (hospitalize == true) {
+      System.out.println("prueba1");
+      boolean full = false;
 
-      int i = 0;
-      boolean full = true;
+        for (int i = 0; rooms.length > i  && !full; i++){
 
-      while(i < rooms.length && !full) {
-
+        System.out.println("prueba2");
         if (rooms[i].getPet() == null) {
+          System.out.println("prueba3");
 
           rooms[i].setPet(foundClientpet(ids, petName));
+          rooms[i].setAvailability(false);
           msj = " Se Hospitalizo la mascota";
-          full = false;
-        }
-        else{
+          full = true;
+        }else {
 
-          msj += "No se encontró espacio para hozpitalizar la mascota";
+          msj += "No se encontró espacio para hospitalizar la mascota";
         }
-        i++;
+      }
+    return msj;
+  }
+
+  //ELIMINAR MASCOTA DE CUARTO
+
+  public String delatePetToRoom (int numberofroom){
+
+  String msj = " ";
+  boolean ya = false;
+
+  for (int i = 0; i < rooms.length && !ya; i++) {
+
+    if (numberofroom == rooms[i].getNumberofroom() && rooms[i].getPet() != null) {
+
+      rooms[i].setPet(null);
+      msj += "Se eliminó la mascota";
+      ya = true;
+
+    }else {
+
+      msj += "No se pudo eliminar la mascota";
+
+    }
+  }
+
+  return msj;
+}
+
+  //MOSTRAR CUARTO
+
+  public String showRoom (){
+
+    String msj = "";
+
+    for (int i = 0; rooms.length > i; i++) {
+
+      if (rooms[i] != null) {
+
+          msj += rooms[i].showRoom() + "\n";
+
       }
     }
     return msj;

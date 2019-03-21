@@ -20,16 +20,18 @@ public class Pet{
   //RELACIONES
 
   private ClinicHistory cH;
+  private Client client;
 
   //CONSTRUCTOR
 
-  public Pet(String name, double weight, char animalType, int age, ClinicHistory cH){
+  public Pet(String name, double weight, char animalType, int age, ClinicHistory cH, Client client){
 
     this.name = name;
     this.weight = weight;
     this.animalType = animalType;
     this.age = age;
     this.cH = cH;
+    this.client = client;
   }
 
   //NAME
@@ -90,6 +92,18 @@ public class Pet{
   public void setAge(int age){
 
     this.age = age;
+  }
+
+  //Client
+
+  public Client getClient(){
+
+    return client;
+  }
+
+  public void setClient(Client client){
+
+    this.client = client;
   }
 
   //GET INFO

@@ -33,6 +33,7 @@ public class Main {
     int addClients = 0;
     int delateimput = 0;
     int showCli = 0;
+    int addToRoom;
 
     while(userImput !=11){
 
@@ -151,6 +152,37 @@ public class Main {
           break;
         }
         break;
+
+        case 4:
+
+        System.out.println("Presione 1 para ingresar los datos");
+        System.out.println("Presione 2 para volver al menu");
+
+        delateimput = reader.nextInt();
+        reader.nextLine();
+        switch (delateimput) {
+
+          case 1:
+          System.out.println("\n");
+          System.out.println("Digite el id");
+
+          long id = reader.nextLong();
+          reader.nextLine();
+
+          System.out.println("\n");
+          System.out.println("Digite el nombre de la mascota");
+
+          String name = reader.nextLine();
+
+          System.out.println(vet.roomAssignment(id, name));
+
+          break;
+        }
+        break;
+
+        case 5:
+
+        System.out.println(vet.showRoom());
       }
     }
   }
@@ -160,10 +192,9 @@ public class Main {
     Medicine Acetaminofen = new Medicine("Acetaminofen", 10.0, 50000.0, 'A');
     ClinicHistory A1 = new ClinicHistory('O', "Pulgas", "tomar Acetaminofen.", new Date (01,12,2019), new Date (25,12,2019));
     A1.addMedicine(Acetaminofen);
-    Pet Sasha = new Pet("Sasha", 20.0, 'D', 4, A1);
     Client Diego = new Client("Diego", 1193254110, "Cl 14 # 83-50", 3399068, new Date (12,12,2015));
+    Pet Sasha = new Pet("Sasha", 20.0, 'D', 4, A1, Diego);  
     Diego.animalClient(Sasha);
-    Room R1 = new Room(true, 5, 1000.0, 10000.0, null);
     vet = new Veterinary("Mi pequeño animalito XD");
     vet.addClients(Diego);
 
@@ -177,6 +208,8 @@ public class Main {
   System.out.println("Presione 1 para ver la informacion del cliente");
   System.out.println("Presione 2 para crear un cliente");
   System.out.println("presione 3 para borrar clientes");
+  System.out.println("Presione 4 para hospitalizar");
+  System.out.println("Presione 5 para mostrar disponibilidad");
 
   }
 }

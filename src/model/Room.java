@@ -7,6 +7,7 @@ public class Room{
 
   //ATRIBUTOS
 
+  private int numberofroom;
   private boolean availability;
   private int days;
   private double prize;
@@ -20,13 +21,26 @@ public class Room{
 
   //CONSTRUCTOR
 
-  public Room(boolean availability, int days, double prize, double total, Pet pet){
+  public Room(int numberofroom, boolean availability, int days, double prize, double total, Pet pet){
 
+    this.numberofroom = numberofroom;
     this.availability = availability;
     this.days = days;
     this.prize = prize;
     this.total = total;
     this.pet = pet;
+  }
+
+  //NUMBER OF ROOM
+
+  public int getNumberofroom(){
+
+    return numberofroom;
+  }
+
+  public void setNumberofroom(int numberofroom){
+
+    this.numberofroom = numberofroom;
   }
 
   //AVAILABILITY
@@ -196,19 +210,50 @@ public class Room{
 
   //MOSTRAR DISPONIBILIDAD DE cuartos
 
-  public String showRoom (){
+  public String showRoom(){
 
     String msj = "";
 
-    msj += "                                   La disponibilidad del cuarto es: "+ availability +"\n";
+    msj += "                                   La disponibilidad del cuarto numero: " + numberofroom + " es: "+ aval() +"\n";
+    msj += "\n";
 
     if (availability == false) {
 
-      msj += "                                 Lleva ocupado: " + days + "dias" + "\n";
-      msj += "                                 El precio de la habitacion por dias es: "+ prize + "\n";
-      msj += "                                 El precio total es: ";
+      msj += "                                   Lleva ocupado: " + days + " dias" + "\n";
+      msj += "\n";
+      msj += "                                   El precio de la habitacion por dias es: "+ prize + "\n";
+      msj += "\n";
+      msj += "                                   El precio total es: "+ total + "\n";
+      msj += "\n";
     }
 
     return msj;
+  }
+
+  //DISPONIBILIDAD
+
+  public String aval(){
+
+    String msj = "";
+
+    if (availability == true) {
+
+      msj += "Disponible";
+
+    }else {
+
+      msj += "No Disponible";
+
+    }
+    return msj;
+  }
+
+  //PRECIO TOTAL
+  public void totalP (){
+
+    if (days > 0) {
+
+      total = (prize * days);
+    }
   }
 }
