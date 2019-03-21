@@ -166,6 +166,7 @@ public class Veterinary{
       rooms[i].setPet(null);
       msj += "Se eliminó la mascota";
       ya = true;
+      rooms[i].setAvailability(true);
 
     }else {
 
