@@ -4,6 +4,11 @@ import model.*;
 import java.util.Scanner;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.text.DecimalFormat;
+
 
 public class Main {
 
@@ -227,6 +232,8 @@ public class Main {
           long ids = reader.nextInt();
           reader.nextLine();
 
+          System.out.println(vet.showClients(ids));
+
           System.out.println("\n");
           System.out.println("Ingrese el nombre de la mascota");
 
@@ -253,8 +260,20 @@ public class Main {
 
           System.out.println(vet.addPets(ids, pet));
 
+          break;
         }
+        break;
+
+        default:
+         System.out.println("Digita una opci�n v�lida");
+         break;
       }
+
+      try {
+				Thread.sleep(1500);
+			} catch (InterruptedException e) {
+
+			}
     }
   }
 
@@ -275,6 +294,11 @@ public class Main {
 
   System.out.println("                                       Bienvenidos a la Veterinaria");
   System.out.println("\n");
+  System.out.println("_____________________________________             .--~~,__  _____________________________________");
+  System.out.println("_____________________________________:-....,-------`~~'._.'  _____________________________________");
+  System.out.println("_____________________________________ `-,,,  ,_      ;'~U'  _____________________________________");
+  System.out.println("_____________________________________  _,-' ,'`-__; '--.  _____________________________________" );
+  System.out.println("_____________________________________ (_/'~~      ''''(;  _____________________________________");
   System.out.println("\n");
   System.out.println("Presione 1 para ver la informacion del cliente");
   System.out.println("Presione 2 para crear un cliente");
