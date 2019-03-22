@@ -194,4 +194,27 @@ public class Veterinary{
     }
     return msj;
   }
+
+  //AGREGAR MASCOTAS
+
+  public String addPets(long ids, Pet pet){
+
+    String msj = "";
+    boolean find = false;
+
+    for (int i = 0; i < clients.size() && !find; i++) {
+
+      if (ids == clients.get(i).getId()) {
+
+        clients.get(i).animalClient(pet);
+        find = true;
+        msj += "Se creo la mascota";
+      }else {
+
+        msj += "No se ha creado la mascota";
+      }
+    }
+
+    return msj;
+  }
 }

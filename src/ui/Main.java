@@ -33,7 +33,8 @@ public class Main {
     int addClients = 0;
     int delateimput = 0;
     int showCli = 0;
-    int addToRoom;
+    int addToRoom = 0;
+    int addPet = 0;
 
     while(userImput !=11){
 
@@ -208,7 +209,51 @@ public class Main {
 
         }
         break;
-        
+
+        case 7:
+
+        System.out.println("Presione 1 para ingresar los datos");
+        System.out.println("Presione 2 para volver al menu");
+
+        addPet = reader.nextInt();
+        reader.nextLine();
+
+        switch (addPet) {
+
+          case 1:
+          System.out.println("\n");
+          System.out.println("Ingrese el id del cliente");
+
+          long ids = reader.nextInt();
+          reader.nextLine();
+
+          System.out.println("\n");
+          System.out.println("Ingrese el nombre de la mascota");
+
+          String name = reader.nextLine();
+
+          System.out.println("\n");
+          System.out.println("Ingrese el peso de la mascota");
+
+          double weigth = reader.nextDouble();
+          reader.nextLine();
+
+          System.out.println("\n");
+          System.out.println("Ingrese el tipo de animal (D, C, B, O)");
+
+          char type = reader.nextLine().charAt(0);
+
+          System.out.println("\n");
+          System.out.println("Ingrese la edad de la mascota");
+
+          int age = reader.nextInt();
+          reader.nextLine();
+
+          Pet pet = new Pet (name, weigth, type, age, null);
+
+          System.out.println(vet.addPets(ids, pet));
+
+        }
       }
     }
   }
@@ -219,7 +264,7 @@ public class Main {
     ClinicHistory A1 = new ClinicHistory('O', "Pulgas", "tomar Acetaminofen.", new Date (01,12,2019), new Date (25,12,2019));
     A1.addMedicine(Acetaminofen);
     Client Diego = new Client("Diego", 1193254110, "Cl 14 # 83-50", 3399068, new Date (12,12,2015));
-    Pet Sasha = new Pet("Sasha", 20.0, 'D', 4, A1, Diego);
+    Pet Sasha = new Pet("Sasha", 20.0, 'D', 4, A1);
     Diego.animalClient(Sasha);
     vet = new Veterinary("Mi pequeño animalito XD");
     vet.addClients(Diego);
@@ -237,6 +282,7 @@ public class Main {
   System.out.println("Presione 4 para hospitalizar");
   System.out.println("Presione 5 para mostrar disponibilidad");
   System.out.println("Presione 6. para dar de alta a una mascota");
+  System.out.println("Presione 7 para crear una mascota");
 
   }
 }

@@ -24,7 +24,7 @@ public class Pet{
 
   //CONSTRUCTOR
 
-  public Pet(String name, double weight, char animalType, int age, ClinicHistory cH, Client client){
+  public Pet(String name, double weight, char animalType, int age, ClinicHistory cH){
 
     this.name = name;
     this.weight = weight;
@@ -124,6 +124,8 @@ public class Pet{
 
     String msj =" ";
 
+    if (cH != null) {
+
     msj += "                                       Peso: " + weight + "\n";
     msj += "                                        Edad: " + age + "\n";
     msj += "\n";
@@ -132,6 +134,7 @@ public class Pet{
     msj += "--------------------------------------- Historia Clinica --------------------------------------- " + "\n";
     msj += cH.record();
 
-    return msj;
+    }
+        return msj;
   }
 }
