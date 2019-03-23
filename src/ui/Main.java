@@ -69,8 +69,6 @@ public class Main {
 
           System.out.println(vet.showClients(id));
 
-          System.out.println();
-
           try {
     				Thread.sleep(1000);
     			} catch (InterruptedException e) {
