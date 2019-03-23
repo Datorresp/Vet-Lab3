@@ -69,6 +69,14 @@ public class Main {
 
           System.out.println(vet.showClients(id));
 
+          System.out.println();
+
+          try {
+    				Thread.sleep(1000);
+    			} catch (InterruptedException e) {
+
+    			}
+
           break;
         }
 
@@ -274,6 +282,8 @@ public class Main {
 			} catch (InterruptedException e) {
 
 			}
+
+      System.exit(0);
     }
   }
 
@@ -300,13 +310,17 @@ public class Main {
   System.out.println("_____________________________________  _,-' ,'`-__; '--.  _____________________________________" );
   System.out.println("_____________________________________ (_/'~~      ''''(;  _____________________________________");
   System.out.println("\n");
-  System.out.println("Presione 1 para ver la informacion del cliente");
-  System.out.println("Presione 2 para crear un cliente");
-  System.out.println("presione 3 para borrar clientes");
-  System.out.println("Presione 4 para hospitalizar");
-  System.out.println("Presione 5 para mostrar disponibilidad");
-  System.out.println("Presione 6. para dar de alta a una mascota");
-  System.out.println("Presione 7 para crear una mascota");
+  System.out.println("   _.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._");
+  System.out.println(" ,'_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._`.");
+  System.out.println("( (      Presione 1 para ver la informacion del cliente     ) )");
+  System.out.println(" ) )     Presione 2 para crear un cliente                  ( (");
+  System.out.println("( (      presione 3 para borrar clientes                    ) )");
+  System.out.println(" ) )     Presione 4 para hospitalizar                      ( (");
+  System.out.println("( (      Presione 5 para mostrar disponibilidad             ) )");
+  System.out.println(" ) )     Presione 6. para dar de alta a una mascota        ( (");
+  System.out.println("( (      Presione 7 para crear una mascota                  ) )");
+  System.out.println(" ) )_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-( (");
+  System.out.println(" `._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._,'");
 
   }
 }
