@@ -491,8 +491,8 @@ public class Main {
   System.out.println("                                                                  ( (      Presione 5 para mostrar disponibilidad             ) )");
   System.out.println("                                                                   ) )     Presione 6. para dar de alta a una mascota        ( (");
   System.out.println("                                                                  ( (      Presione 7 para crear una mascota                  ) )");
-  System.out.println("                                                                   ) )     Presione 8 para crear una HISTORIA CLINICA                  ) )");
-  System.out.println("                                                                   ) )_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-( (");
+  System.out.println("                                                                   ) )     Presione 8 para crear una historia clinica        ( (");
+  System.out.println("                                                                  ( (_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.- ) )");
   System.out.println("                                                                   `._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._,'");
 
   }
