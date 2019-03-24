@@ -69,11 +69,19 @@ public class Main {
 
           System.out.println(vet.showClients(id));
 
-          try {
-    				Thread.sleep(1000);
-    			} catch (InterruptedException e) {
+          System.out.println("\n");
+          System.out.println("   _.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._");
+          System.out.println(" ,'_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._`.");
+          System.out.println("( (      Presione 1 para ver la informacion del cliente     ) )");
+          System.out.println(" ) )     Presione 2 para crear un cliente                  ( (");
+          System.out.println("( (      presione 3 para borrar clientes                    ) )");
+          System.out.println(" ) )     Presione 4 para hospitalizar                      ( (");
+          System.out.println("( (      Presione 5 para mostrar disponibilidad             ) )");
+          System.out.println(" ) )     Presione 6. para dar de alta a una mascota        ( (");
+          System.out.println("( (      Presione 7 para crear una mascota                  ) )");
+          System.out.println(" ) )_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-( (");
+          System.out.println(" `._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._,'");
 
-    			}
 
           break;
         }
@@ -141,6 +149,20 @@ public class Main {
 
           break;
         }
+
+        System.out.println("\n");
+        System.out.println("   _.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._");
+        System.out.println(" ,'_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._`.");
+        System.out.println("( (      Presione 1 para ver la informacion del cliente     ) )");
+        System.out.println(" ) )     Presione 2 para crear un cliente                  ( (");
+        System.out.println("( (      presione 3 para borrar clientes                    ) )");
+        System.out.println(" ) )     Presione 4 para hospitalizar                      ( (");
+        System.out.println("( (      Presione 5 para mostrar disponibilidad             ) )");
+        System.out.println(" ) )     Presione 6. para dar de alta a una mascota        ( (");
+        System.out.println("( (      Presione 7 para crear una mascota                  ) )");
+        System.out.println(" ) )_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-( (");
+        System.out.println(" `._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._,'");
+
         break;
 
 
@@ -163,6 +185,20 @@ public class Main {
           System.out.println(vet.delateClients(id));
           break;
         }
+
+        System.out.println("\n");
+        System.out.println("   _.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._");
+        System.out.println(" ,'_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._`.");
+        System.out.println("( (      Presione 1 para ver la informacion del cliente     ) )");
+        System.out.println(" ) )     Presione 2 para crear un cliente                  ( (");
+        System.out.println("( (      presione 3 para borrar clientes                    ) )");
+        System.out.println(" ) )     Presione 4 para hospitalizar                      ( (");
+        System.out.println("( (      Presione 5 para mostrar disponibilidad             ) )");
+        System.out.println(" ) )     Presione 6. para dar de alta a una mascota        ( (");
+        System.out.println("( (      Presione 7 para crear una mascota                  ) )");
+        System.out.println(" ) )_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-( (");
+        System.out.println(" `._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._,'");
+
         break;
 
         case 4:
@@ -190,11 +226,39 @@ public class Main {
 
           break;
         }
+
+        System.out.println("\n");
+        System.out.println("   _.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._");
+        System.out.println(" ,'_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._`.");
+        System.out.println("( (      Presione 1 para ver la informacion del cliente     ) )");
+        System.out.println(" ) )     Presione 2 para crear un cliente                  ( (");
+        System.out.println("( (      presione 3 para borrar clientes                    ) )");
+        System.out.println(" ) )     Presione 4 para hospitalizar                      ( (");
+        System.out.println("( (      Presione 5 para mostrar disponibilidad             ) )");
+        System.out.println(" ) )     Presione 6. para dar de alta a una mascota        ( (");
+        System.out.println("( (      Presione 7 para crear una mascota                  ) )");
+        System.out.println(" ) )_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-( (");
+        System.out.println(" `._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._,'");
+
         break;
 
         case 5:
 
         System.out.println(vet.showRoom());
+
+
+        System.out.println("\n");
+        System.out.println("   _.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._");
+        System.out.println(" ,'_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._`.");
+        System.out.println("( (      Presione 1 para ver la informacion del cliente     ) )");
+        System.out.println(" ) )     Presione 2 para crear un cliente                  ( (");
+        System.out.println("( (      presione 3 para borrar clientes                    ) )");
+        System.out.println(" ) )     Presione 4 para hospitalizar                      ( (");
+        System.out.println("( (      Presione 5 para mostrar disponibilidad             ) )");
+        System.out.println(" ) )     Presione 6. para dar de alta a una mascota        ( (");
+        System.out.println("( (      Presione 7 para crear una mascota                  ) )");
+        System.out.println(" ) )_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-( (");
+        System.out.println(" `._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._,'");
 
         break;
 
@@ -219,6 +283,20 @@ public class Main {
           break;
 
         }
+
+        System.out.println("\n");
+        System.out.println("   _.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._");
+        System.out.println(" ,'_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._`.");
+        System.out.println("( (      Presione 1 para ver la informacion del cliente     ) )");
+        System.out.println(" ) )     Presione 2 para crear un cliente                  ( (");
+        System.out.println("( (      presione 3 para borrar clientes                    ) )");
+        System.out.println(" ) )     Presione 4 para hospitalizar                      ( (");
+        System.out.println("( (      Presione 5 para mostrar disponibilidad             ) )");
+        System.out.println(" ) )     Presione 6. para dar de alta a una mascota        ( (");
+        System.out.println("( (      Presione 7 para crear una mascota                  ) )");
+        System.out.println(" ) )_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-( (");
+        System.out.println(" `._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._,'");
+
         break;
 
         case 7:
@@ -268,20 +346,39 @@ public class Main {
 
           break;
         }
+
+        System.out.println("\n");
+        System.out.println("   _.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._");
+        System.out.println(" ,'_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._`.");
+        System.out.println("( (      Presione 1 para ver la informacion del cliente     ) )");
+        System.out.println(" ) )     Presione 2 para crear un cliente                  ( (");
+        System.out.println("( (      presione 3 para borrar clientes                    ) )");
+        System.out.println(" ) )     Presione 4 para hospitalizar                      ( (");
+        System.out.println("( (      Presione 5 para mostrar disponibilidad             ) )");
+        System.out.println(" ) )     Presione 6. para dar de alta a una mascota        ( (");
+        System.out.println("( (      Presione 7 para crear una mascota                  ) )");
+        System.out.println(" ) )_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-( (");
+        System.out.println(" `._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._,'");
+
         break;
 
         default:
          System.out.println("Digita una opci�n v�lida");
+
+         System.out.println("\n");
+         System.out.println("   _.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._");
+         System.out.println(" ,'_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._`.");
+         System.out.println("( (      Presione 1 para ver la informacion del cliente     ) )");
+         System.out.println(" ) )     Presione 2 para crear un cliente                  ( (");
+         System.out.println("( (      presione 3 para borrar clientes                    ) )");
+         System.out.println(" ) )     Presione 4 para hospitalizar                      ( (");
+         System.out.println("( (      Presione 5 para mostrar disponibilidad             ) )");
+         System.out.println(" ) )     Presione 6. para dar de alta a una mascota        ( (");
+         System.out.println("( (      Presione 7 para crear una mascota                  ) )");
+         System.out.println(" ) )_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-( (");
+         System.out.println(" `._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._,'");
          break;
       }
-
-      try {
-				Thread.sleep(1500);
-			} catch (InterruptedException e) {
-
-			}
-
-      System.exit(0);
     }
   }
 

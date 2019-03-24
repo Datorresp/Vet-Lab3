@@ -256,4 +256,22 @@ public class Room{
       total = (prize * days);
     }
   }
+
+  //CREAR HISTORIA CLINICA
+
+  public String hC(String petName, ClinicHistory ch){
+
+    String msj = "";
+
+    if (pet != null) {
+
+      if (petName.equals(pet.getName())) {
+
+        pet.hC(ch);
+        msj += "Se crea la historia de la mascota"
+      }
+    }
+
+    return msj;
+  }
 }

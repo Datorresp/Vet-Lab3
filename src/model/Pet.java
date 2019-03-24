@@ -137,4 +137,20 @@ public class Pet{
     }
         return msj;
   }
+
+  //CREAR  HISTORIA
+
+  public String hC (ClinicHistory ch){
+
+    int check = 0;
+    String message ="";
+
+    if(cH == null){
+
+      cH = ch;
+      message += "Se creo la historia clinica";
+    }
+
+    return message;
+  }
 }

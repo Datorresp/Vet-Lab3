@@ -217,4 +217,22 @@ public class Veterinary{
 
     return msj;
   }
+
+  //Agregar  Historia CLINICA
+
+  public String createCH(int nRoom, String petName, ClinicHistory cH){
+
+
+    String msj =" ";
+
+    for (int i = O; i < rooms.length; i++) {
+
+      if (rooms[i] != null) {
+
+        rooms[i].hC(petName, ch);
+        msj += "Se creo la historiaclinica del cuarto";
+      }
+    }
+    return msj;
+  }
 }
