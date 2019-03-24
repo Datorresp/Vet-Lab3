@@ -268,7 +268,7 @@ public class Room{
       if (petName.equals(pet.getName())) {
 
         pet.hC(ch);
-        msj += "Se crea la historia de la mascota"
+        msj += "Se crea la historia de la mascota";
       }
     }
 

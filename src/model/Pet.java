@@ -21,10 +21,11 @@ public class Pet{
 
   private ClinicHistory cH;
   private Client client;
+  private Room room;
 
   //CONSTRUCTOR
 
-  public Pet(String name, double weight, char animalType, int age, ClinicHistory cH){
+  public Pet(String name, double weight, char animalType, int age, ClinicHistory cH, Room room){
 
     this.name = name;
     this.weight = weight;
@@ -104,6 +105,32 @@ public class Pet{
   public void setClient(Client client){
 
     this.client = client;
+  }
+
+  //ROOM
+
+  public Room getRoom(){
+
+    return room;
+  }
+
+  public void setRoom(Room room){
+
+    this.room = room;
+  }
+
+  //BORRAR HISTORIAS CLINICAS
+
+  public String delateHC(){
+
+    String msj = "";
+
+    if (room == null) {
+      cH = null;
+      msj += "Se ha borraddo la historia clinica";
+    }
+
+    return msj;
   }
 
   //GET INFO

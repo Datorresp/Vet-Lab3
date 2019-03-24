@@ -225,12 +225,14 @@ public class Veterinary{
 
     String msj =" ";
 
-    for (int i = O; i < rooms.length; i++) {
+    for (int i = 0; i < rooms.length; i++) {
 
-      if (rooms[i] != null) {
+      if (rooms[i].getNumberofroom() == nRoom) {
 
-        rooms[i].hC(petName, ch);
+        rooms[i].hC(petName, cH);
         msj += "Se creo la historiaclinica del cuarto";
+      } else {
+        msj += "no se creo la historiaClinica";
       }
     }
     return msj;
