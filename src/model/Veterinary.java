@@ -24,14 +24,14 @@ public class Veterinary{
     this.name = name;
     clients = new ArrayList<Client>();
     rooms = new Room [NUMBEROFROOMS];
-    rooms[0]= new Room(1, true, 5, 1000.0, 10000.0, null);
-    rooms[1]= new Room(2, true, 5, 1000.0, 10000.0, null);
-    rooms[2]= new Room(3, true, 5, 1000.0, 10000.0, null);
-    rooms[3]= new Room(4, true, 5, 1000.0, 10000.0, null);
-    rooms[4]= new Room(5, true, 5, 1000.0, 10000.0, null);
-    rooms[5]= new Room(6, true, 5, 1000.0, 10000.0, null);
-    rooms[6]= new Room(7, true, 5, 1000.0, 10000.0, null);
-    rooms[7]= new Room(8, true, 5, 1000.0, 10000.0, null);
+    rooms[0]= new Room(1, true, null);
+    rooms[1]= new Room(2, true, null);
+    rooms[2]= new Room(3, true, null);
+    rooms[3]= new Room(4, true, null);
+    rooms[4]= new Room(5, true, null);
+    rooms[5]= new Room(6, true, null);
+    rooms[6]= new Room(7, true, null);
+    rooms[7]= new Room(8, true, null);
 
   }
 
@@ -154,7 +154,7 @@ public class Veterinary{
 
   //ELIMINAR MASCOTA DE CUARTO
 
-  public String delatePetToRoom (int numberofroom){
+  public String delatePetToRoom (int numberofroom, int day){
 
   String msj = " ";
   boolean ya = false;
@@ -164,6 +164,7 @@ public class Veterinary{
     if (numberofroom == rooms[i].getNumberofroom() && rooms[i].getPet() != null) {
 
       rooms[i].setPet(null);
+      msj += "El total a pagar es: " + rooms[i].totalP();
       msj += "Se eliminó la mascota";
       ya = true;
       rooms[i].setAvailability(true);

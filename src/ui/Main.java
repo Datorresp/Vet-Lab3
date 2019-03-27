@@ -129,7 +129,7 @@ public class Main {
         break;
 
       case 7:
-        addPet();
+        addPets();
 
         try {
   				Thread.sleep(3000);
@@ -333,13 +333,19 @@ public class Main {
       int nRoom = reader.nextInt();
       reader.nextLine();
 
-      System.out.println(vet.delatePetToRoom(nRoom));
+      System.out.println("\n");
+      System.out.println("Digite el numero de dias que la habitacion estuvo ocupada: ");
+
+      int days = reader.nextInt();
+      reader.nextLine();
+
+      System.out.println(vet.delatePetToRoom(nRoom, days));
 
       break;
     }
   }
 
-  public void addPet(){
+  public void addPets(){
 
     int addPet = 0;
 
@@ -367,9 +373,9 @@ public class Main {
 
       System.out.println("\n");
       System.out.println("Ingrese el peso de la mascota");
-
-      double weigth = reader.nextDouble();
-      reader.nextLine();
+      String userResponse = reader.nextLine();
+      double weight = Double.valueOf(userResponse);
+      
 
       System.out.println("\n");
       System.out.println("Ingrese el tipo de animal (D, C, B, O)");
@@ -382,7 +388,7 @@ public class Main {
       int age = reader.nextInt();
       reader.nextLine();
 
-      Pet pet = new Pet (name, weigth, type, age, null, null);
+      Pet pet = new Pet (name, weight, type, age, null, null);
 
       System.out.println(vet.addPets(ids, pet));
 

@@ -21,7 +21,7 @@ public class Room{
 
   //CONSTRUCTOR
 
-  public Room(int numberofroom, boolean availability, int days, double prize, double total, Pet pet){
+  public Room(int numberofroom, boolean availability, Pet pet){
 
     this.numberofroom = numberofroom;
     this.availability = availability;
@@ -105,107 +105,111 @@ public class Room{
 
   //PRECIO POR DIA DE LA MASCOTA
 
-  public void prizeForDay(){
+  public double prizeForDay(){
+
+    double total = 0.0;
 
     if (pet.getAnimalType() == pet.DOG) {
 
       if (pet.getWeight() > 1.0 && pet.getWeight() < 3.0) {
 
-        prize = 15000.0;
+        total = 15000.0;
 
       }
 
-      if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
+      else if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
 
-        prize = 17000.0;
+        total = 17000.0;
 
       }
 
-      if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
+      else if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
 
-        prize = 20000.0;
+        total = 20000.0;
 
       }
       else {
 
-        prize = 25000.0;
+        total = 25000.0;
       }
     }
 
-    if (pet.getAnimalType() == pet.CAT) {
+    else if (pet.getAnimalType() == pet.CAT) {
 
       if (pet.getWeight() > 1.0 && pet.getWeight() < 3.0) {
 
-        prize = 10000.0;
+        total = 10000.0;
 
       }
 
-      if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
+      else if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
 
-        prize = 12000.0;
+        total = 12000.0;
 
       }
 
-      if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
+      else if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
 
-        prize = 15000.0;
+        total = 15000.0;
 
       }
       else {
 
-        prize = 20000.0;
+        total = 20000.0;
       }
     }
 
-    if (pet.getAnimalType() == pet.BIRD) {
+    else if (pet.getAnimalType() == pet.BIRD) {
 
       if (pet.getWeight() > 1.0 && pet.getWeight() < 3.0) {
 
-        prize = 10000.0;
+        total = 10000.0;
 
       }
 
-      if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
+      else if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
 
-        prize = 12000.0;
+        total = 12000.0;
 
       }
 
-      if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
+      else if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
 
-        prize = 20000.0;
+        total = 20000.0;
 
       }
       else {
 
-        prize = 25000.0;
+        total = 25000.0;
       }
     }
 
-    if (pet.getAnimalType() == pet.OTHER) {
+    else if (pet.getAnimalType() == pet.OTHER) {
 
       if (pet.getWeight() > 1.0 && pet.getWeight() < 3.0) {
 
-        prize = 10000.0;
+        total = 10000.0;
 
       }
 
-      if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
+      else if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
 
-        prize = 17000.0;
+        total = 17000.0;
 
       }
 
-      if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
+      else if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
 
-        prize = 30000.0;
+        total = 30000.0;
 
       }
       else {
 
-        prize = 30000.0;
+        total = 30000.0;
       }
     }
+
+    return total;
   }
 
   //MOSTRAR DISPONIBILIDAD DE cuartos
@@ -219,11 +223,7 @@ public class Room{
 
     if (availability == false) {
 
-      msj += "                                   Lleva ocupado: " + days + " dias" + "\n";
-      msj += "\n";
-      msj += "                                   El precio de la habitacion por dias es: "+ prize + "\n";
-      msj += "\n";
-      msj += "                                   El precio total es: "+ total + "\n";
+      msj += "                                   El precio de la habitacion por dias es: "+ prizeForDay() + "\n";
       msj += "\n";
     }
 
@@ -249,12 +249,16 @@ public class Room{
   }
 
   //PRECIO TOTAL
-  public void totalP (){
+  public double totalP (){
+
+    double totalPr = 0.0;
 
     if (days > 0) {
 
-      total = (prize * days);
+      totalPr = ( prizeForDay()* days);
     }
+
+    return totalPr;
   }
 
   //CREAR HISTORIA CLINICA
