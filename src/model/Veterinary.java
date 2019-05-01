@@ -14,15 +14,15 @@ public class Veterinary{
 
   //RELACIONES
 
-  private ArrayList<Client> clients;
-  private Room [] rooms;
+  private final ArrayList<Client> clients;
+  private final Room [] rooms;
 
   //CONSTRUCTOR
 
-  public Veterinary(String name){
+  public Vet(String name){
 
     this.name = name;
-    clients = new ArrayList<Client>();
+    clients = new ArrayList<>();
     rooms = new Room [NUMBEROFROOMS];
     rooms[0]= new Room(1, true, null);
     rooms[1]= new Room(2, true, null);
@@ -219,23 +219,21 @@ public class Veterinary{
     return msj;
   }
 
-  //Agregar  Historia CLINICA
 
-  public String createCH(int nRoom, String petName, ClinicHistory cH){
+  public String changeCI(String name, long  id, String nAdress, String nPhone){
 
+      String msj = "";
 
-    String msj =" ";
+      for(int i = 0; i < clients.size(); i++){
 
-    for (int i = 0; i < rooms.length; i++) {
+          if(clients.get(i).getName().equals(name) && clients.get(i).getId() == id){
 
-      if (rooms[i].getNumberofroom() == nRoom) {
-
-        rooms[i].hC(petName, cH);
-        msj += "Se creo la historiaclinica del cuarto";
-      } else {
-        msj += "no se creo la historiaClinica";
+              clients.get(i).setAdress(nAdress);
+              clients.get(i).setId(id);
+              msj += "Los datos se han cambiado sastifactoriamente.";
+          }
       }
-    }
-    return msj;
+      return msj;
   }
+
 }

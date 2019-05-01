@@ -1,5 +1,4 @@
 package model;
-import java.util.ArrayList;
 
 public class Medicine{
 
@@ -21,6 +20,7 @@ public class Medicine{
 
   //CONSTRUCTOR
 
+
   public Medicine (String name, double dose, double dosePrize, char frequency){
 
     this.name = name;
@@ -31,53 +31,94 @@ public class Medicine{
 
   //NAME
 
+    /**
+     *
+     * @return
+     */
+
   public String getName(){
 
     return  name;
   }
 
-  public void setName(String name){
+    /**
+     *
+     * @param name
+     */
+    public void setName(String name){
 
     this.name = name;
   }
 
   //DOSE
 
+    /**
+     *
+     * @return
+     */
+
   public double getDose(){
 
     return  dose;
   }
 
-  public void setDose(double dose){
+    /**
+     *
+     * @param dose
+     */
+    public void setDose(double dose){
 
     this.dose = dose;
   }
 
   //DOSE PRIZE
 
+    /**
+     *
+     * @return
+     */
+
   public double getDosePrize(){
 
     return  dosePrize;
   }
 
-  public void setDosePrize(double dosePrize){
+    /**
+     *
+     * @param dosePrize
+     */
+    public void setDosePrize(double dosePrize){
 
     this.dosePrize = dosePrize;
   }
 
   //FREQUENCY
 
+    /**
+     *
+     * @return
+     */
+
   public char getFrequency(){
 
     return  frequency;
   }
 
-  public void setFrequency(char frequency){
+    /**
+     *
+     * @param frequency
+     */
+    public void setFrequency(char frequency){
 
     this.frequency = frequency;
   }
 
   //MEDICADA
+
+    /**
+     *
+     * @return
+     */
 
   public String getInfo(){
 

@@ -22,6 +22,15 @@ public class ClinicHistory{
 
   //CONSTRUCTOR
 
+    /**
+     *
+     * @param state
+     * @param symptom
+     * @param diagnosis
+     * @param date1
+     * @param date2
+     */
+
   public ClinicHistory(char state, String symptom, String diagnosis, Date date1, Date date2){
 
     this.state = state;
@@ -34,65 +43,116 @@ public class ClinicHistory{
 
   //STATE
 
+    /**
+     *
+     * @return
+     */
+
   public char getState(){
 
     return  state;
   }
 
-  public void setState(char state){
+    /**
+     *
+     * @param state
+     */
+    public void setState(char state){
 
     this.state = state;
   }
 
   //SYMPTOM
 
+    /**
+     *
+     * @return
+     */
+
   public String getSymptom(){
 
     return  symptom;
   }
 
-  public void setSymptom(String symptom){
+    /**
+     *
+     * @param symptom
+     */
+    public void setSymptom(String symptom){
 
     this.symptom = symptom;
   }
 
   //DIAGNOSIS
 
+    /**
+     *
+     * @return
+     */
+
   public String getDiagnosis(){
 
     return  diagnosis;
   }
 
-  public void setDiagnosis(String diagnosis){
+    /**
+     *
+     * @param diagnosis
+     */
+    public void setDiagnosis(String diagnosis){
 
     this.diagnosis = diagnosis;
   }
 
   //DATE1
 
+    /**
+     *
+     * @return
+     */
+
   public Date getDate1(){
 
     return  date1;
   }
 
-  public void setDate1(Date date1){
+    /**
+     *
+     * @param date1
+     */
+    public void setDate1(Date date1){
 
     this.date1 = date1;
   }
 
   //DATE2
 
+    /**
+     *
+     * @return
+     */
+
   public Date getDate2(){
 
     return  date2;
   }
 
-  public void setDate2(Date date2){
+    /**
+     *
+     * @param date2
+     */
+    public void setDate2(Date date2){
 
     this.date2 = date2;
   }
 
   //MEDICAMENTOS
+
+    /**
+     *
+     * @param medicine
+     * @return
+     */
 
   public boolean addMedicine(Medicine medicine){
 
@@ -100,6 +160,11 @@ public class ClinicHistory{
   }
 
   //MOSTRAR MEDICADA
+
+    /**
+     *
+     * @return
+     */
 
   public String showMed(){
 
@@ -115,6 +180,11 @@ public class ClinicHistory{
 
   //Fecha INGRESO
 
+    /**
+     *
+     * @return
+     */
+
   public String fecha1(){
 
     String message = " ";
@@ -126,6 +196,11 @@ public class ClinicHistory{
 
   //Fecha Salida
 
+    /**
+     *
+     * @return
+     */
+
   public String fecha2(){
 
     String message = " ";
@@ -136,6 +211,11 @@ public class ClinicHistory{
   }
 
   //HISTORIA CLINICA
+
+    /**
+     *
+     * @return
+     */
 
   public String record(){
 

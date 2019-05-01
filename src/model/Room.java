@@ -1,5 +1,4 @@
 package model;
-import java.util.ArrayList;
 
 public class Room{
 
@@ -21,6 +20,13 @@ public class Room{
 
   //CONSTRUCTOR
 
+    /**
+     *
+     * @param numberofroom
+     * @param availability
+     * @param pet
+     */
+
   public Room(int numberofroom, boolean availability, Pet pet){
 
     this.numberofroom = numberofroom;
@@ -31,79 +37,142 @@ public class Room{
     this.pet = pet;
   }
 
+    Room(int i, boolean b, Object object) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
   //NUMBER OF ROOM
+
+    /**
+     *
+     * @return
+     */
 
   public int getNumberofroom(){
 
     return numberofroom;
   }
 
-  public void setNumberofroom(int numberofroom){
+    /**
+     *
+     * @param numberofroom
+     */
+    public void setNumberofroom(int numberofroom){
 
     this.numberofroom = numberofroom;
   }
 
   //AVAILABILITY
 
+    /**
+     *
+     * @return
+     */
+
   public boolean getAvailability(){
 
     return availability;
   }
 
-  public void setAvailability(boolean availability){
+    /**
+     *
+     * @param availability
+     */
+    public void setAvailability(boolean availability){
 
     this.availability = availability;
   }
 
   //DAYS
 
+    /**
+     *
+     * @return
+     */
+
   public int getDays(){
 
     return days;
   }
 
-  public void setDays(int days){
+    /**
+     *
+     * @param days
+     */
+    public void setDays(int days){
 
     this.days = days;
   }
 
   //PRIZE
 
+    /**
+     *
+     * @return
+     */
+
   public double getPrize(){
 
     return prize;
   }
 
-  public void setPrize(double prize){
+    /**
+     *
+     * @param prize
+     */
+    public void setPrize(double prize){
 
     this.prize = prize;
   }
 
   //TOTAL
 
+    /**
+     *
+     * @return
+     */
+
   public double getTotal(){
 
     return total;
   }
 
-  public void setTotal(double total){
+    /**
+     *
+     * @param total
+     */
+    public void setTotal(double total){
 
     this.total = total;
   }
 
   //Pet
 
+    /**
+     *
+     * @return
+     */
+
   public Pet getPet(){
 
     return pet;
   }
 
-  public void setPet(Pet pet){
+    /**
+     *
+     * @param pet
+     */
+    public void setPet(Pet pet){
 
     this.pet = pet;
   }
 
   //PRECIO POR DIA DE LA MASCOTA
+
+    /**
+     *
+     * @return
+     */
 
   public double prizeForDay(){
 
@@ -214,6 +283,11 @@ public class Room{
 
   //MOSTRAR DISPONIBILIDAD DE cuartos
 
+    /**
+     *
+     * @return
+     */
+
   public String showRoom(){
 
     String msj = "";
@@ -232,6 +306,11 @@ public class Room{
 
   //DISPONIBILIDAD
 
+    /**
+     *
+     * @return
+     */
+
   public String aval(){
 
     String msj = "";
@@ -249,6 +328,11 @@ public class Room{
   }
 
   //PRECIO TOTAL
+
+    /**
+     *
+     * @return
+     */
   public double totalP (){
 
     double totalPr = 0.0;
@@ -261,21 +345,4 @@ public class Room{
     return totalPr;
   }
 
-  //CREAR HISTORIA CLINICA
-
-  public String hC(String petName, ClinicHistory ch){
-
-    String msj = "";
-
-    if (pet != null) {
-
-      if (petName.equals(pet.getName())) {
-
-        pet.hC(ch);
-        msj += "Se crea la historia de la mascota";
-      }
-    }
-
-    return msj;
-  }
 }

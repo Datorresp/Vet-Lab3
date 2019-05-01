@@ -14,10 +14,12 @@ public class Client{
 
   //RELACIONES
 
-  private ArrayList<Pet> pets;
+  private final ArrayList<Pet> pets;
   private Date date1;
 
   //CONSTRUCTOR
+
+
 
   public Client(String name, long id, String adress, long phone, Date date1){
 
@@ -31,64 +33,120 @@ public class Client{
 
   //NAME
 
+    /**
+     * Description This method get the name
+     * post: Get the name
+     * @return The name of the client
+     */
+
   public String getName(){
 
     return name;
   }
 
-  public void setName(String name){
+    /**
+     * Description This method set the name
+     * post: Set the name
+     * @param name of the client
+     */
+    public void setName(String name){
 
     this.name = name;
   }
 
   //ID
 
+    /**
+     * Description This method get the id of the client
+     * post: Get the client id
+     * @return client's id
+     */
+
   public long getId(){
 
     return id;
   }
 
-  public void setId(long id){
+    /**
+     * Description This method set the  clients's id
+     * post set id of the client
+     * @param id of the client
+     */
+    public void setId(long id){
 
     this.id = id;
   }
 
   //ADRESS
 
+    /**
+     * Description This method get the client's adress
+     * post: get the adress of the client
+     * @return clients adress
+     */
+
   public String getAdress(){
 
     return adress;
   }
 
-  public void setAdress(String adress){
+    /**
+     * Description This method set the client's adress
+     * post: set the adress of the client
+     * @param adress of the client
+     */
+    public void setAdress(String adress){
 
     this.adress = adress;
   }
 
   //PHONE
 
+    /**
+     * Description This method get
+     * @return
+     */
+
   public long getPhone(){
 
     return phone;
   }
 
-  public void setPhone(long phone){
+    /**
+     *
+     * @param phone
+     */
+    public void setPhone(long phone){
 
     this.phone = phone;
   }
 
   //DATE1
 
+    /**
+     *
+     * @return
+     */
+
   public Date getDate1(){
 
     return date1;
   }
 
-  public void setDate1(Date date1){
+    /**
+     *
+     * @param date1
+     */
+    public void setDate1(Date date1){
     this.date1 = date1;
   }
 
   //SHOW CLIENT
+
+    /**
+     *
+     * @return
+     */
 
   public String showClients(){
 
@@ -109,6 +167,11 @@ public class Client{
 
   //Fecha
 
+    /**
+     *
+     * @return
+     */
+
   public String fecha(){
 
     String message = " ";
@@ -120,12 +183,23 @@ public class Client{
 
   //AÑADIR MASCOTAS
 
+    /**
+     *
+     * @param pet
+     * @return
+     */
+
   public boolean animalClient(Pet pet){
 
      return pets.add(pet);
   }
 
   //MOSTRAR MASCOTAS
+
+    /**
+     *
+     * @return
+     */
 
   public String showPets(){
 
@@ -163,4 +237,24 @@ public class Client{
 
     return p;
   }
+
+  	/**
+	*Description This method allows to update the basic data of a veterinary client, these data include, address and phone number.
+	*pre: The client was created before.
+	*post: The address and /or phone number of the client is updated.
+	*@param nAdress
+	*@param nPhone
+	*/
+
+	public void modifyAdressPhone(String nAdress, long nPhone){
+
+		if(nAdress.equalsIgnoreCase("")){
+			phone = nPhone;
+
+		} else{
+
+        adress = nAdress;
+
+    }
+	}
 }

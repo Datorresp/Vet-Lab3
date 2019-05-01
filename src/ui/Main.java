@@ -106,48 +106,22 @@ public class Main {
 
       case 5:
         availability();
-
-        try {
-  				Thread.sleep(3000);
-  			} catch (InterruptedException e) {
-
-  			}
-
         message();
         break;
 
       case 6:
         delatePetToRoom();
-
-        try {
-  				Thread.sleep(3000);
-  			} catch (InterruptedException e) {
-
-  			}
-
         message();
         break;
 
       case 7:
         addPets();
 
-        try {
-  				Thread.sleep(3000);
-  			} catch (InterruptedException e) {
-
-  			}
-
         message();
         break;
 
       case 8:
         addHC();
-
-        try {
-  				Thread.sleep(3000);
-  			} catch (InterruptedException e) {
-
-  			}
 
         message();
         break;
@@ -159,12 +133,16 @@ public class Main {
          break;
       }
 
+
       try {
-				Thread.sleep(1500);
+				Thread.sleep(3000);
 			} catch (InterruptedException e) {
 
 			}
-    }
+
+  }
+
+
   }
 
   public void infoClient(){
@@ -375,7 +353,7 @@ public class Main {
       System.out.println("Ingrese el peso de la mascota");
       String userResponse = reader.nextLine();
       double weight = Double.valueOf(userResponse);
-      
+
 
       System.out.println("\n");
       System.out.println("Ingrese el tipo de animal (D, C, B, O)");
