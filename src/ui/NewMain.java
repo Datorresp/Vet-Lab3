@@ -4,7 +4,7 @@
  * Universidad Icesi (Cali - Colombia)
  * Departamento TIC - Algoritmos y programaci�n I
  * LAB3 - Veterinaria
- * @Author: Diego Torres <diegot145@hotmail.com.com>
+ * @Author: Diego Torres <diegot145@hotmail.com>
  * @Date: Entrega 24 Marzo 2019
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
@@ -16,18 +16,14 @@ import model.*;
 import java.util.Scanner;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.text.DecimalFormat;
 
 
-public class Main {
+public class NewMain {
 
-  private Veterinary vet;
-  private Scanner reader;
+  private Vet vet;
+  private final Scanner reader;
 
-  public Main (){
+  public NewMain (){
 
     init();
     reader = new Scanner(System.in);
@@ -35,7 +31,7 @@ public class Main {
 
   public static void main(String[] args) {
 
-    Main m = new Main();
+    NewMain m = new NewMain();
     m.message();
     m.showMenu();
     Calendar calendario = new GregorianCalendar();
@@ -354,6 +350,12 @@ public class Main {
       String userResponse = reader.nextLine();
       double weight = Double.valueOf(userResponse);
 
+      System.out.println("\n");
+      System.out.println("Ingrese el peso de la mascota");
+
+      double heigth = Double.valueOf(userResponse);
+      reader.nextLine();
+
 
       System.out.println("\n");
       System.out.println("Ingrese el tipo de animal (D, C, B, O)");
@@ -366,9 +368,10 @@ public class Main {
       int age = reader.nextInt();
       reader.nextLine();
 
-      Pet pet = new Pet (name, weight, type, age, null, null);
 
-      System.out.println(vet.addPets(ids, pet));
+      Pet p = new Pet (name, weight, heigth, type, age, null, null);
+
+      System.out.println(vet.addPets(ids, p));
 
       break;
     }
@@ -437,15 +440,15 @@ public class Main {
     }
   }
 
-  public void init(){
+  private void init(){
 
     Medicine Acetaminofen = new Medicine("Acetaminofen", 10.0, 50000.0, 'A');
     ClinicHistory A1 = new ClinicHistory('O', "Pulgas", "tomar Acetaminofen.", new Date (01,12,2019), new Date (25,12,2019));
     A1.addMedicine(Acetaminofen);
     Client Diego = new Client("Diego", 1193254110, "Cl 14 # 83-50", 3399068, new Date (12,12,2015));
-    Pet Sasha = new Pet("Sasha", 20.0, 'D', 4, A1, null);
+    Pet Sasha = new Pet("Sasha", 20.0, 60.0, 'D', 4, null, null);
     Diego.animalClient(Sasha);
-    vet = new Veterinary("Mi pequeño animalito XD");
+    vet = new Vet("Mi pequeño animalito XD");
     vet.addClients(Diego);
 
   }

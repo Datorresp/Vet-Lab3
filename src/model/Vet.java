@@ -1,7 +1,7 @@
 package model;
 import java.util.ArrayList;
 
-public class Veterinary{
+public class Vet{
 
   //CONSTANTE
 
@@ -19,7 +19,7 @@ public class Veterinary{
 
   //CONSTRUCTOR
 
-  public Veterinary(String name){
+  public Vet(String name){
 
     this.name = name;
     clients = new ArrayList<>();
