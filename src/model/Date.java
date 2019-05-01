@@ -52,4 +52,14 @@ public class Date{
 
     this.year = year;
   }
+
+  public String DateInfo(){
+
+    String msj = "";
+
+    msj += day + month + year;
+    return msj;
+
+
+  }
 }

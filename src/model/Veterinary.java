@@ -19,7 +19,7 @@ public class Veterinary{
 
   //CONSTRUCTOR
 
-  public Vet(String name){
+  public Veterinary(String name){
 
     this.name = name;
     clients = new ArrayList<>();
