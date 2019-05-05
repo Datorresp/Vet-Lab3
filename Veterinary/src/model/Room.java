@@ -20,33 +20,21 @@ public class Room{
 
   //CONSTRUCTOR
 
-    /**
-     *
-     * @param numberofroom
-     * @param availability
-     * @param pet
-     */
 
   public Room(int numberofroom, boolean availability, Pet pet){
 
     this.numberofroom = numberofroom;
     this.availability = availability;
-    this.days = days;
-    this.prize = prize;
-    this.total = total;
     this.pet = pet;
   }
 
-    Room(int i, boolean b, Object object) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
   //NUMBER OF ROOM
-
-    /**
-     *
-     * @return
-     */
+    
+        /**
+	* Allows to get the number of room. <br>
+	* <b>post:</b> The number of the room is given.
+	* @return numberofroom
+	*/
 
   public int getNumberofroom(){
 
@@ -54,9 +42,11 @@ public class Room{
   }
 
     /**
-     *
+     * Allows to set the number of room. <br>
+     * <b>post:</b> The number of the room is changed.
      * @param numberofroom
      */
+  
     public void setNumberofroom(int numberofroom){
 
     this.numberofroom = numberofroom;
@@ -65,8 +55,9 @@ public class Room{
   //AVAILABILITY
 
     /**
-     *
-     * @return
+     *Allows to get the availability of the room. <br>
+     * <b>post:</b> The availability of the room is given.
+     * @return availability
      */
 
   public boolean getAvailability(){
@@ -75,7 +66,8 @@ public class Room{
   }
 
     /**
-     *
+     *Allows to set the availability of the room. <br>
+     * <b>post:</b> The availability of the room is changed.
      * @param availability
      */
     public void setAvailability(boolean availability){
@@ -86,8 +78,9 @@ public class Room{
   //DAYS
 
     /**
-     *
-     * @return
+     * Allows to get the days of the room. <br>
+     * <b>post:</b> the days of the room is given.
+     * @return days
      */
 
   public int getDays(){
@@ -96,7 +89,8 @@ public class Room{
   }
 
     /**
-     *
+     * Allows to set the days of the room. <br>
+     * <b>post:</b> the days of the room is changed.
      * @param days
      */
     public void setDays(int days){
@@ -107,7 +101,8 @@ public class Room{
   //PRIZE
 
     /**
-     *
+     * Allows to get the prize of the room. <br>
+     * <b>post:</b> the prize of the room is given.
      * @return
      */
 
@@ -117,7 +112,8 @@ public class Room{
   }
 
     /**
-     *
+     * Allows to set the prize of the room. <br>
+     * <b>post:</b> the prize of the room is changed.
      * @param prize
      */
     public void setPrize(double prize){
@@ -128,7 +124,8 @@ public class Room{
   //TOTAL
 
     /**
-     *
+     * Allows to get the totalPrize of the room. <br>
+     * <b>post:</b> the totalPrize of the room is given.
      * @return
      */
 
@@ -138,7 +135,8 @@ public class Room{
   }
 
     /**
-     *
+     * Allows to set the totalPrize of the room. <br>
+     * <b>post:</b> the totalPrize of the room is changed.
      * @param total
      */
     public void setTotal(double total){
@@ -149,7 +147,8 @@ public class Room{
   //Pet
 
     /**
-     *
+     * Allows to get the pet of the room. <br>
+     * <b>post:</b> the pet of the room is given.
      * @return
      */
 
@@ -159,7 +158,8 @@ public class Room{
   }
 
     /**
-     *
+     * Allows to set the pet of the room. <br>
+     * <b>post:</b> the pet of the room is changed.
      * @param pet
      */
     public void setPet(Pet pet){
@@ -170,122 +170,125 @@ public class Room{
   //PRECIO POR DIA DE LA MASCOTA
 
     /**
-     *
-     * @return
+     * Calculate the price per day of the room <br>
+     * <b> pre: </b> the room is occupate for someone
+     * <b> post </b> calculate the price
+     * @return finalPrice
      */
 
   public double prizeForDay(){
 
-    double total = 0.0;
+    double finalPrice = 0.0;
 
-    if (pet.getAnimalType() == pet.DOG) {
+    if (pet.getAnimalType() == Pet.DOG) {
 
       if (pet.getWeight() > 1.0 && pet.getWeight() < 3.0) {
 
-        total = 15000.0;
+        finalPrice = 15000.0;
 
       }
 
       else if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
 
-        total = 17000.0;
+        finalPrice = 17000.0;
 
       }
 
       else if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
 
-        total = 20000.0;
+        finalPrice = 20000.0;
 
       }
       else {
 
-        total = 25000.0;
+        finalPrice = 25000.0;
       }
     }
 
-    else if (pet.getAnimalType() == pet.CAT) {
+    else if (pet.getAnimalType() == Pet.CAT) {
 
       if (pet.getWeight() > 1.0 && pet.getWeight() < 3.0) {
 
-        total = 10000.0;
+        finalPrice = 10000.0;
 
       }
 
       else if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
 
-        total = 12000.0;
+        finalPrice = 12000.0;
 
       }
 
       else if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
 
-        total = 15000.0;
+        finalPrice = 15000.0;
 
       }
       else {
 
-        total = 20000.0;
+        finalPrice = 20000.0;
       }
     }
 
-    else if (pet.getAnimalType() == pet.BIRD) {
+    else if (pet.getAnimalType() == Pet.BIRD) {
 
       if (pet.getWeight() > 1.0 && pet.getWeight() < 3.0) {
 
-        total = 10000.0;
+        finalPrice = 10000.0;
 
       }
 
       else if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
 
-        total = 12000.0;
+        finalPrice = 12000.0;
 
       }
 
       else if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
 
-        total = 20000.0;
+        finalPrice = 20000.0;
 
       }
       else {
 
-        total = 25000.0;
+        finalPrice = 25000.0;
       }
     }
 
-    else if (pet.getAnimalType() == pet.OTHER) {
+    else if (pet.getAnimalType() == Pet.OTHER) {
 
       if (pet.getWeight() > 1.0 && pet.getWeight() < 3.0) {
 
-        total = 10000.0;
+        finalPrice = 10000.0;
 
       }
 
       else if (pet.getWeight() > 3.1 && pet.getWeight() < 10.0) {
 
-        total = 17000.0;
+        finalPrice = 17000.0;
 
       }
 
       else if (pet.getWeight() > 10.1 && pet.getWeight() < 20) {
 
-        total = 30000.0;
+        finalPrice = 30000.0;
 
       }
       else {
 
-        total = 30000.0;
+        finalPrice = 30000.0;
       }
     }
 
-    return total;
+    return finalPrice;
   }
 
   //MOSTRAR DISPONIBILIDAD DE cuartos
 
     /**
-     *
-     * @return
+     * this method allow to the information of the room <br>
+     * <b> post </b> show all the atributes of the room
+     * @return a message like a data sheet of the room
      */
 
   public String showRoom(){
@@ -307,8 +310,8 @@ public class Room{
   //DISPONIBILIDAD
 
     /**
-     *
-     * @return
+     * this method allow th the availability of the room <br>
+     * @return calculate if the availability is true or false
      */
 
   public String aval(){
@@ -330,8 +333,8 @@ public class Room{
   //PRECIO TOTAL
 
     /**
-     *
-     * @return
+     * this method calculate the final price of the room <br>
+     * @return total price
      */
   public double totalP (){
 

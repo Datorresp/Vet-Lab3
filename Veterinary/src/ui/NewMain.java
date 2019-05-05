@@ -40,6 +40,7 @@ public class NewMain {
     int DIA = calendario.get(Calendar.DAY_OF_MONTH);
   }
 
+  @SuppressWarnings("fallthrough")
   public void showMenu(){
 
     int userImput = 0;
@@ -121,7 +122,23 @@ public class NewMain {
 
         message();
         break;
+        
+       case 9:
+        changeCI();
 
+        message();
+        break;
+        
+       case 10:
+           AddDiagnosysToThePet();
+           
+           message();
+        
+       case 11:
+           earnings();
+           
+           message();
+        
       default:
          System.out.println("Digita una opci�n v�lida");
 
@@ -204,27 +221,8 @@ public class NewMain {
       long phone = reader.nextLong();
       reader.nextLine();
 
-      System.out.println("\n");
-      System.out.println("Digite el dia de nacimiento: ");
 
-      int day = reader.nextInt();
-      reader.nextLine();
-
-      System.out.println("\n");
-      System.out.println("Digite el mes de nacimiento");
-
-      int month = reader.nextInt();
-      reader.nextLine();
-
-      System.out.println("\n");
-      System.out.println("Digite el año de nacimiento");
-
-      int year = reader.nextInt();
-      reader.nextLine();
-
-      Date  fecha1 = new Date (day, month, year);
-
-      Client client = new Client(name, id, adress, phone, fecha1);
+      Client client = new Client(name, id, adress, phone);
 
       System.out.println(vet.addClients(client));
 
@@ -439,16 +437,108 @@ public class NewMain {
 
     }
   }
+  
+  public void changeCI(){
+      
+      int CCI = 0;
+      
+    System.out.println("Presione 1 para ingresar los datos");
+    System.out.println("Presione 2 para volver al menu");
+
+    CCI = reader.nextInt();
+    reader.nextLine();
+    switch (CCI) {
+        
+        case 1:
+      System.out.println("\n");
+      System.out.println("\n");
+      System.out.println("\n");
+      System.out.println("Digite el nombre");
+
+      String name = reader.nextLine();
+
+      System.out.println("\n");
+      System.out.println("Digite el id");
+
+      long id = reader.nextLong();
+      reader.nextLine();
+      
+      System.out.println("\n");
+      System.out.println("Digite la nueva direccion");
+
+      String adress = reader.nextLine();
+
+      System.out.println("\n");
+      System.out.println("Digite el nuevo telefono");
+
+      long phone = reader.nextLong();
+      reader.nextLine();
+      
+      System.out.println(vet.changeCI(name, id, adress, phone));
+    }  
+  }
+  
+  public void AddDiagnosysToThePet(){
+      
+      int ADTTP =0;
+      
+          System.out.println("Presione 1 para ingresar los datos");
+    System.out.println("Presione 2 para volver al menu");
+
+    ADTTP = reader.nextInt();
+    reader.nextLine();
+    switch (ADTTP) {
+        
+     case 1:
+         
+         
+      System.out.println("\n");
+      System.out.println("Digite el id");
+
+      long id;
+      id = reader.nextLong();
+      reader.nextLine();
+      
+      System.out.println("\n");
+      System.out.println("Digite el nombre de la mascota");
+
+      String name;
+      name = reader.nextLine();
+      
+      System.out.println("\n");
+      System.out.println("Ingrese el diagnostico");
+
+      String diagnosys = reader.nextLine();
+      
+      System.out.println(vet.addSymptoms(id, name, diagnosys));
+
+    }   
+    
+    
+  }
+  
+  public void earnings(){
+
+		
+		System.out.println("ganancia por vacuna: "+vet.feeServicesVeterinary(1));
+		System.out.println("ganancia por profilaxis dental: "+vet.feeServicesVeterinary(2));
+		System.out.println("ganancias por baño a domicilio: "+vet.feeServicesVeterinary(3));
+		System.out.println("ganancia por corte de uñas: "+vet.feeServicesVeterinary(4));
+		System.out.println("Income for baño: "+vet.feeServicesVeterinary(5));
+		System.out.println("");
+
+	}
+
 
   private void init(){
 
     Medicine Acetaminofen = new Medicine("Acetaminofen", 10.0, 50000.0, 'A');
     ClinicHistory A1 = new ClinicHistory('O', "Pulgas", "tomar Acetaminofen.", new Date (01,12,2019), new Date (25,12,2019));
     A1.addMedicine(Acetaminofen);
-    Client Diego = new Client("Diego", 1193254110, "Cl 14 # 83-50", 3399068, new Date (12,12,2015));
+    Client Diego = new Client("Diego", 1193254110, "Cl 14 # 83-50", 3399068);
     Pet Sasha = new Pet("Sasha", 20.0, 60.0, 'D', 4, null, null);
     Diego.animalClient(Sasha);
-    vet = new Vet("Mi pequeño animalito XD");
+    vet = new Vet("Mi pequeño animalito XD", 10000.0);
     vet.addClients(Diego);
 
   }
@@ -479,6 +569,8 @@ public class NewMain {
   System.out.println("                                                                   ) )     Presione 6. para dar de alta a una mascota        ( (");
   System.out.println("                                                                  ( (      Presione 7 para crear una mascota                  ) )");
   System.out.println("                                                                   ) )     Presione 8 para crear una historia clinica        ( (");
+  System.out.println("                                                                  ( (      Presione 9 para actualizar la informacion          ) )");
+  System.out.println("                                                                   ) )     Presione 10 para ver las ganancias                ( (");
   System.out.println("                                                                  ( (_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.- ) )");
   System.out.println("                                                                   `._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._,'");
 

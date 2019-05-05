@@ -9,11 +9,11 @@ public class Service {
 	public final static double NP = 8000.0;
 	public final static double SP = 45000.0;
 
-	public final static char BATH = 'b';
-	public final static char BATHDOM = 'd';
-	public final static char TEETH = 't';
-	public final static char NAILS = 'n';
-	public final static char SHOT = 's';
+	public final static char BATH = 'B';
+	public final static char BATHDOM = 'D';
+	public final static char TEETH = 'T';
+	public final static char NAILS = 'N';
+	public final static char VACCINE = 's';
 
 
 	//ATTRIBUTES
@@ -120,31 +120,31 @@ public class Service {
 	
                 case BATH:
 		
-                    msj = "Bath";
+                    msj = "BAÑO";
 		
                     break;
 		
                 case BATHDOM:
 		
-                    msj = "Bath to go";
+                    msj = "BAÑO A DOMICILIO";
 		
                     break;
 		
                 case TEETH:
 		
-                    msj = "Dental prophylaxis";
+                    msj = "PROFILAXIS DENTAL";
 		
                     break;
 		
                 case NAILS:
 		
-                    msj = "Cutting nails";
+                    msj = "CORTE DE UÑAS";
 		
                     break;
 		
-                case SHOT:
+                case VACCINE:
 		
-                    msj = "Vaccination";
+                    msj = "VACUNA";
 		
                     break;	
 		}

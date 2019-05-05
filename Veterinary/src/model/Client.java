@@ -15,21 +15,20 @@ public class Client{
   //RELACIONES
 
   private final ArrayList<Pet> pets;
-  private Date date1;
 
   //CONSTRUCTOR
 
 
 
-  public Client(String name, long id, String adress, long phone, Date date1){
+  public Client(String name, long id, String adress, long phone){
 
     this.name = name;
     this.id = id;
     this.adress = adress;
     this.phone = phone;
-    this.date1 = date1;
-    pets = new ArrayList<Pet>();
+    pets = new ArrayList<>();
   }
+
 
   //NAME
 
@@ -121,26 +120,6 @@ public class Client{
     this.phone = phone;
   }
 
-  //DATE1
-
-    /**
-     *
-     * @return
-     */
-
-  public Date getDate1(){
-
-    return date1;
-  }
-
-    /**
-     *
-     * @param date1
-     */
-    public void setDate1(Date date1){
-    this.date1 = date1;
-  }
-
   //SHOW CLIENT
 
     /**
@@ -155,28 +134,11 @@ public class Client{
     message += "                                        Numero de identificacion: " + id + "\n";
     message += "                                        Direccion: " + adress + "\n";
     message += "                                        Telefono: " + phone + "\n";
-    message += "                                        Fecha de ingreso: " + fecha() + "\n";
     message += "\n";
     message += "\n";
     message += "\n";
     message += showPets();
     message += "---------------------------------------------------------------------------------------------------------------------";
-
-    return message;
-  }
-
-  //Fecha
-
-    /**
-     *
-     * @return
-     */
-
-  public String fecha(){
-
-    String message = " ";
-
-    message += date1.getDay() +"/"+ date1.getMonth() +"/"+ date1.getYear();
 
     return message;
   }
@@ -215,8 +177,8 @@ public class Client{
     msj += "\n";
     msj += "\n";
 
-    for(int i = 0; i< pets.size(); i++){
-
+    for(int i = 0; i < pets.size(); i++){
+        System.out.println("XD");
         msj += pets.get(i).getInfo();
     }
 
@@ -256,37 +218,49 @@ public class Client{
                     adress = nAdress;
                 }
 	}
-        
-          	public String finalAddPet(long ClientId, String petName, int userImput, String symptom, String diagnosys, String medName, double medDose, double medPrice, char medFrecuency){
-		String msj = "";
-                boolean encontrado = false;
-
-                for(int i = 0; i < pets.size() && !encontrado; i++){
+   
+        public void addSymptoms(String name, String symptomps){
+            
+            String msj = "";
+            boolean encontrado = false;
+            
+            for(int i = 0; i < pets.size() && !encontrado; i++){
+                
+                if (pets.get(i).getName().equals(name)){
                     
-                    if(id == ClientId ){
-                        
-                        if(pets.get(i).getName().equals(petName)){
-                            
-                            encontrado = true;
-                            
-                            switch (userImput) {
-                                case 1: pets.get(i).addSymptoms(symptom);
-                                msj += "Se ha creado correctamente los sintomas";
-				break;
-                                case 2: pets.get(i).addDiagnosys(diagnosys);
-                                msj += "se ha creado correctamente el diagnostico";
-				break;
-                                case 3: pets.get(i).addMedicine(medName, medDose, medPrice, medFrecuency);
-                                msj += "se ha añadido correctamente la medicina";
-                                break;
-			
-                            }
-                        }
-                    }
+                    pets.get(i).addSymptoms(symptomps);
+           
                 }
-
-		return msj;
+            }
+        }
+        
+        public double petsFeeServices(int userInput){
+		double fee = 0.0;
+		for (int i = 0; i < pets.size() ; i++) {
+			fee += pets.get(i).servicesFees(userInput);	
+		}
+		return fee;
 	}
-  
+        
+        public double PetsServicesFees(int userInput){
+            double fee = 0.0;
+            switch (userInput) {
+		case 0:
+                	fee += petsFeeServices(1);
+			fee += petsFeeServices(2);
+			fee += petsFeeServices(3);
+			fee += petsFeeServices(4);
+			fee += petsFeeServices(5);
+                        
+			break;
+
+                default:
+			fee = petsFeeServices(userInput);
+                        
+			break;	
+		}
+		return fee;
+	}
+
 }
 

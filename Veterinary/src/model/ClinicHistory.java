@@ -38,7 +38,7 @@ public class ClinicHistory{
     this.diagnosis = diagnosis;
     this.date1 = date1;
     this.date2 = date2;
-    med = new ArrayList<Medicine>();
+    med = new ArrayList<>();
   }
 
   //STATE

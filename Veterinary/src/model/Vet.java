@@ -19,7 +19,7 @@ public class Vet{
 
   //CONSTRUCTOR
 
-  public Vet(String name){
+  public Vet(String name, double totalEarnings){
 
     this.name = name;
     clients = new ArrayList<>();
@@ -220,7 +220,7 @@ public class Vet{
   }
 
   
-  public String changeCI(String name, long  id, String nAdress, String nPhone){
+  public String changeCI(String name, long  id, String nAdress, long nPhone){
       
       String msj = "";
       
@@ -229,11 +229,51 @@ public class Vet{
           if(clients.get(i).getName().equals(name) && clients.get(i).getId() == id){
               
               clients.get(i).setAdress(nAdress);
-              clients.get(i).setId(id);
+              clients.get(i).setPhone(nPhone);
               msj += "Los datos se han cambiado sastifactoriamente.";
           }         
       }
       return msj;
   }
   
+  public String addSymptoms(long id, String name, String diagnosys){
+      
+      String msj = "";
+      
+      for(int i = 0; i < clients.size(); i++){
+          
+          if(clients.get(i).getId() == id){
+              
+              clients.get(i).addSymptoms(name, diagnosys);
+              msj += "Se creo el sintoma";
+            }
+        }
+      return msj;
+    }
+  
+  	public double feeServicesPeople(int userInput){
+		double fee = 0.0;
+		for (int i = 0; i<clients.size() ; i++ ) {
+			fee += clients.get(i).petsFeeServices(userInput);	
+		}
+		return fee;
+
+	}
+        
+        	public double feeServicesVeterinary(int userInput){
+		double fee = 0.0;
+		switch (userInput) {
+			case 0:
+				fee += feeServicesPeople(1);
+				fee += feeServicesPeople(2);
+				fee += feeServicesPeople(3);
+				fee += feeServicesPeople(4);
+				fee += feeServicesPeople(5);
+				break;
+			default:
+				fee = feeServicesPeople(userInput);	
+				break;
+		}
+		return fee;
+	}
 }
