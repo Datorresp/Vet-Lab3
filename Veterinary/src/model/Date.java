@@ -19,11 +19,22 @@ public class Date{
 
   //day
 
+  	/**
+	* Allows to get the number of the day of a date. <br>
+	* @return The number of the day of a date.
+	*/
+  
   public int getDay(){
 
     return day;
   }
 
+  	/**
+	* Allows to change the number of the day of a date. <br>
+	* <b>post:</b> The number of the day of a date is changed.
+	* @param day The number of the day of a date. This param must be greater than zero.
+	*/
+  
   public void setDay(int day){
 
     this.day = day;
@@ -31,10 +42,21 @@ public class Date{
 
   //month
 
+  	/**
+	* Allows to get the number of the month of a date. <br>
+	* @return The number of the month of a date.
+	*/
+
   public int getMonth(){
 
     return month;
   }
+  
+  	/**
+	* Allows to change the number of the month of a date. <br>
+	* <b>post:</b> The number of the month of a date is changed.
+	* @param month The number of the month of a date. This param must be greater than zero.
+	*/
 
   public void setMonth(int month){
 
@@ -43,6 +65,11 @@ public class Date{
 
   //year
 
+  	/**
+	* Allows to get the number of the year of a date. <br>
+	* @return The number of the year of a date.
+	*/
+  
   public int getYear(){
 
     return year;
@@ -53,6 +80,12 @@ public class Date{
     this.year = year;
 
   }
+  
+  	/**
+	* Allows to get a date as a String in the format: DD/MM/YY. <br>
+	* @return A date in the format: DD/MM/YY.
+	*/
+
   
   public String DateInfo(){
       

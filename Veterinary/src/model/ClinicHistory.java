@@ -22,14 +22,6 @@ public class ClinicHistory{
 
   //CONSTRUCTOR
 
-    /**
-     *
-     * @param state
-     * @param symptom
-     * @param diagnosis
-     * @param date1
-     * @param date2
-     */
 
   public ClinicHistory(char state, String symptom, String diagnosis, Date date1, Date date2){
 
@@ -149,21 +141,20 @@ public class ClinicHistory{
   //MEDICAMENTOS
 
     /**
-     *
-     * @param medicine
-     * @return
+     *  this method create a medicine
+     * @param medicine 
      */
 
-  public boolean addMedicine(Medicine medicine){
+  public void addMedicine(Medicine medicine){
 
-    return med.add(medicine);
+     med.add(medicine);
   }
 
   //MOSTRAR MEDICADA
 
     /**
-     *
-     * @return
+     * this method show the medicine <br>
+     * @return the medicine 
      */
 
   public String showMed(){
@@ -178,43 +169,12 @@ public class ClinicHistory{
     return msj;
   }
 
-  //Fecha INGRESO
-
-    /**
-     *
-     * @return
-     */
-
-  public String fecha1(){
-
-    String message = " ";
-
-    message += date1.getDay() +"/"+ date1.getMonth() +"/"+ date1.getYear();
-
-    return message;
-  }
-
-  //Fecha Salida
-
-    /**
-     *
-     * @return
-     */
-
-  public String fecha2(){
-
-    String message = " ";
-
-    message += date2.getDay() +"/"+ date2.getMonth() +"/"+ date2.getYear();
-
-    return message;
-  }
 
   //HISTORIA CLINICA
 
     /**
-     *
-     * @return
+     * this method show all the recors <br>
+     * @return the list of all atributes of clincHistory
      */
 
   public String record(){
@@ -225,8 +185,8 @@ public class ClinicHistory{
     msj += "                                        Sintomas: "+ symptom + "\n";
     msj += "                                        Diagnostico: "+ diagnosis + "\n";
     msj += "                                        Medicamento: " + showMed() + "\n";
-    msj += "                                        Fecha de ingreso: "+ fecha1() + "\n";
-    msj += "                                        Fecha de salida: "+ fecha2() + "\n";
+    msj += "                                        Fecha de ingreso: "+ date1.DateInfo()+ "\n";
+    msj += "                                        Fecha de salida: "+ date2.DateInfo()+ "\n";
 
     return  msj;
   }

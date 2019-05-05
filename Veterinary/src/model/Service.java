@@ -13,30 +13,30 @@ public class Service {
 	public final static char BATHDOM = 'D';
 	public final static char TEETH = 'T';
 	public final static char NAILS = 'N';
-	public final static char VACCINE = 's';
+	public final static char VACCINE = 'V';
 
 
 	//ATTRIBUTES
 	private char type;
 	private double cost;
-	private  String clientId;
+	private  long clientId;
 	private  String petName;
 
 
 	//RELATIONSHIPS
-	private Pet clientPet;
-	private  Date d1;
+	private Pet pet;
+	private  Date date1;
 
 
 
 	//METHODS
 
-	public Service(char type, String ownerId, String petId, Pet clientPet, Date dateJob){
+	public Service(char type, long clientId, String petId, Pet pet, Date date1){
 		this.type = type;
-		this.clientId = ownerId;
+		this.clientId = clientId;
 		this.petName = petId;
-		this.clientPet = clientPet;
-		this.d1 = dateJob;
+		this.pet = pet;
+		this.date1 = date1;
 	}
 
     public char getType() {
@@ -55,11 +55,11 @@ public class Service {
         this.cost = cost;
     }
 
-    public String getClientId() {
+    public long getClientId() {
         return clientId;
     }
 
-    public void setClientId(String clientId) {
+    public void setClientId(long clientId) {
         this.clientId = clientId;
     }
 
@@ -71,48 +71,47 @@ public class Service {
         this.petName = petName;
     }
 
-    public Pet getClientPet() {
-        return clientPet;
+    public Pet getPet() {
+        return pet;
     }
 
-    public void setClientPet(Pet clientPet) {
-        this.clientPet = clientPet;
+    public void setPet(Pet pet) {
+        this.pet = pet;
     }
 
     public Date getD1() {
-        return d1;
+        return date1;
     }
 
-    public void setD1(Date d1) {
-        this.d1 = d1;
+    public void setD1(Date date1) {
+        this.date1 = date1;
     }
 
-        
-        
-
-    
-
-
-        
-
-
-
-	public String serviceInfo(){
+    /**
+     * this method allow to the list of the service
+     * @return list of the service
+     */
+    public String serviceInfo(){
 		String msj = "";
 			   msj += "\n";
 			   msj += "+-----------------------------------------------------------------------------+\n";
-			   msj += " Service: "+typeToString(type)+"\n";
-			   msj += " Price: "+cost+" \n";
-			   msj += " Owner ID: "+clientId+"\n";
-			   msj += " Pet's name: " +petName+ "\n";
-			   msj += " Date of the service: " +d1.DateInfo()+"\n";
+			   msj += " servicio: "+typeToString(type)+"\n";
+			   msj += " precio: "+cost+" \n";
+			   msj += " identificacion del cliente: "+clientId+"\n";
+			   msj += " nombre de la mascota: " +petName+ "\n";
+			   msj += " fecha: " +date1.DateInfo()+"\n";
 			   msj += "+-----------------------------------------------------------------------------+\n";
 		
                            return msj;
 
 	}
 
-	public String typeToString(char type){
+    /**
+     * this method let know wich is each service
+     * @param type
+     * @return service's name
+     */
+    public String typeToString(char type){
 		
             String msj = "";
 	

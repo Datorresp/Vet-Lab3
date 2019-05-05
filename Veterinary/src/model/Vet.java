@@ -61,12 +61,26 @@ public class Vet{
 
   //AÑADIR CLIENTES
 
+    /**
+     * this method add a client<br>
+     * <b> post:</b> the client is added
+     * @param client
+     * @return if the client was added or not
+     */
+
   public boolean addClients(Client client){
 
-    return clients.add(client);
+     return clients.add(client);
   }
 
   //ELIMINAR CLIENTES
+
+    /**
+     * this method delate clients<br>
+     * <b> post: delate clients </b>
+     * @param ids
+     * @return a boolean if the client was eliminated or not
+     */
 
   public boolean delateClients(long ids){
 
@@ -93,6 +107,12 @@ public class Vet{
 
   //Mostrar Clientes
 
+    /**
+     * this method show a data sheet of the client <br>
+     * @param ids
+     * @return the data sheet of the client
+     */
+
   public String showClients(long ids){
 
     String msj = "-----------------------------";
@@ -108,6 +128,13 @@ public class Vet{
   }
 
   //Agregar mascotasa cuartos
+
+    /**
+     * this method find a pet<br>
+     * @param ids
+     * @param petName
+     * @return the pet
+     */
 
   public Pet foundClientpet (long ids, String petName){
 
@@ -127,7 +154,14 @@ public class Vet{
     return p;
   }
 
-  public String roomAssignment(long ids, String petName){
+    /**
+     * this method assign a room to the pet <br>
+     * <b> post: assign the pet to the room</b> 
+     * @param ids
+     * @param petName
+     * @return a message if the pet was assignated or not
+     */
+    public String roomAssignment(long ids, String petName){
 
     String msj = "";
 
@@ -153,6 +187,14 @@ public class Vet{
   }
 
   //ELIMINAR MASCOTA DE CUARTO
+
+    /**
+     * this method eliminate a pet to the room <br>
+     * <b> post: delate the pet </b>
+     * @param numberofroom
+     * @param day
+     * @return a message if the pet was delated or not
+     */
 
   public String delatePetToRoom (int numberofroom, int day){
 
@@ -181,6 +223,11 @@ public class Vet{
 
   //MOSTRAR CUARTO
 
+    /**
+     *this method show all the information of the room<br>
+     * @return  a data sheet of the room
+     */
+
   public String showRoom (){
 
     String msj = "";
@@ -197,6 +244,14 @@ public class Vet{
   }
 
   //AGREGAR MASCOTAS
+
+    /**
+     * this method add a pet<br>
+     * <b> post:  add a pet </b>
+     * @param ids
+     * @param pet
+     * @return if the pet was added or not
+     */
 
   public String addPets(long ids, Pet pet){
 
@@ -219,8 +274,16 @@ public class Vet{
     return msj;
   }
 
-  
-  public String changeCI(String name, long  id, String nAdress, long nPhone){
+    /**
+     * this method change the client's information<br>
+     * <b> post: </b> change the information
+     * @param name
+     * @param id
+     * @param nAdress
+     * @param nPhone
+     * @return a message if the information is changed or not
+     */
+    public String changeCI(String name, long  id, String nAdress, long nPhone){
       
       String msj = "";
       

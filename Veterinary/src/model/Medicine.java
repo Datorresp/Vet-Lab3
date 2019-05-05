@@ -32,8 +32,9 @@ public class Medicine{
   //NAME
 
     /**
-     *
-     * @return
+     * Allows to get the name of the medicine. <br>
+     * <b>post:</b> The  name of the medicine is given.
+     * @return name of the medicince
      */
 
   public String getName(){
@@ -41,10 +42,12 @@ public class Medicine{
     return  name;
   }
 
-    /**
-     *
+   /**
+     * Allows to set the name of the medicine. <br>
+     * <b>post:</b> the name of the medicine is changed.
      * @param name
      */
+  
     public void setName(String name){
 
     this.name = name;
@@ -53,8 +56,9 @@ public class Medicine{
   //DOSE
 
     /**
-     *
-     * @return
+     * Allows to get the dose of the medicine. <br>
+     * <b>post:</b> The  dose of the medicine is given.
+     * @return dose of the dedicine
      */
 
   public double getDose(){
@@ -63,7 +67,8 @@ public class Medicine{
   }
 
     /**
-     *
+     * Allows to set the dose of the medicine. <br>
+     * <b>post:</b> the dose of the medicine is changed.
      * @param dose
      */
     public void setDose(double dose){
@@ -74,8 +79,9 @@ public class Medicine{
   //DOSE PRIZE
 
     /**
-     *
-     * @return
+     * Allows to get the dose price of the medicine. <br>
+     * <b>post:</b> The  dose price of the medicine is given.
+     * @return doseprice
      */
 
   public double getDosePrize(){
@@ -84,7 +90,8 @@ public class Medicine{
   }
 
     /**
-     *
+     * Allows to set the dose price of the medicine. <br>
+     * <b>post:</b> the dose price of the medicine is changed.
      * @param dosePrize
      */
     public void setDosePrize(double dosePrize){
@@ -95,8 +102,9 @@ public class Medicine{
   //FREQUENCY
 
     /**
-     *
-     * @return
+     * Allows to get the frequency of the medicine. <br>
+     * <b>post:</b> The frequency of the medicine is given.
+     * @return frequency of the dose
      */
 
   public char getFrequency(){
@@ -105,7 +113,8 @@ public class Medicine{
   }
 
     /**
-     *
+     * Allows to set the frequency of the medicine. <br>
+     * <b>post:</b> the dose price of the medicine is changed.
      * @param frequency
      */
     public void setFrequency(char frequency){
@@ -116,8 +125,8 @@ public class Medicine{
   //MEDICADA
 
     /**
-     *
-     * @return
+     * this method get all the info
+     * @return listof the atributes of the medicine
      */
 
   public String getInfo(){

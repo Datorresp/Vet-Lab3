@@ -123,8 +123,9 @@ public class Client{
   //SHOW CLIENT
 
     /**
-     *
-     * @return
+     * this method show a data sheet of the client <br>
+     * 
+     * @return the list with the  client's data
      */
 
   public String showClients(){
@@ -146,21 +147,21 @@ public class Client{
   //AÑADIR MASCOTAS
 
     /**
-     *
+     * this method add a pet <br>
      * @param pet
-     * @return
+     * @return  a boolean if the pet was added or not
      */
 
   public boolean animalClient(Pet pet){
 
-     return pets.add(pet);
+      return pets.add(pet);
   }
 
   //MOSTRAR MASCOTAS
 
     /**
-     *
-     * @return
+     * this method show all the pets of the client <br>
+     * @return pet's information
      */
 
   public String showPets(){
@@ -178,7 +179,6 @@ public class Client{
     msj += "\n";
 
     for(int i = 0; i < pets.size(); i++){
-        System.out.println("XD");
         msj += pets.get(i).getInfo();
     }
 
